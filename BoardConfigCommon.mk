@@ -184,7 +184,7 @@ BOARD_SEPOLICY_UNION += \
 TARGET_RELEASETOOLS_EXTENSIONS := device/htc/m8-common/releasetools
 
 # Hardware
-BOARD_HARDWARE_CLASS := $(LOCAL_PATH)/cmhw
+BOARD_HARDWARE_CLASS := $(LOCAL_PATH)/mkhw
 
 # Inherit from the proprietary version
 -include vendor/htc/m8-common/BoardConfigVendor.mk
