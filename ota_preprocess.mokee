@@ -16,6 +16,7 @@
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 #
 
-echo "package_extract_file(\"variant_script.sh\", \"/tmp/variant_script.sh\");" >> updater-script
-echo "assert(run_program(\"/tmp/variant_script.sh\") == 0);" >> updater-script
-echo "delete(\"/tmp/variant_script.sh\");" >> updater-script
+SCRIPT=$ANDROID_BUILD_TOP/device/htc/m8-common/releasetools/variant_script.sh
+if [ -f $SCRIPT ];then
+	cp $SCRIPT out/
+fi
