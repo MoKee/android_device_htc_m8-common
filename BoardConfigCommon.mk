@@ -172,7 +172,10 @@ BOARD_SEPOLICY_UNION += \
 TARGET_RELEASETOOLS_EXTENSIONS := device/htc/m8-common/releasetools
 
 # Hardware
-BOARD_HARDWARE_CLASS := $(LOCAL_PATH)/mkhw
+BOARD_USES_MOKEE_HARDWARE := true
+BOARD_HARDWARE_CLASS += \
+    $(LOCAL_PATH)/mkhw \
+    hardware/mokee/mkhw
 
 # Inherit from the proprietary version
 -include vendor/htc/m8-common/BoardConfigVendor.mk
