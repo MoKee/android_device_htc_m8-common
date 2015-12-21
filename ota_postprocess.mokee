@@ -17,5 +17,6 @@
 #
 
 echo "package_extract_file(\"variant_script.sh\", \"/tmp/variant_script.sh\");" >> updater-script
+echo "set_metadata(\"/tmp/variant_script.sh\", \"uid\", 0, \"gid\", 0, \"mode\", 0755);" >> updater-script
 echo "assert(run_program(\"/tmp/variant_script.sh\") == 0);" >> updater-script
 echo "delete(\"/tmp/variant_script.sh\");" >> updater-script
